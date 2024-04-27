@@ -14,9 +14,9 @@ export const datasourceoption: DataSourceOptions = {
     migrations: [`${__dirname}/migrations/*.ts`],
     entities: [`dist/**/*.entity.js`],
     // ssl: true
-    // ssl: {
-    //     rejectUnauthorized: false, // This may be needed if your certificate is self-signed
-    //   },
+    ssl: {
+        rejectUnauthorized: false, // This may be needed if your certificate is self-signed
+      },
 }
 
 export default new DataSource(datasourceoption)

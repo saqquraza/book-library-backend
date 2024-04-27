@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete, HttpStatus } from '@nestjs/common';
+import { Controller, Get, Post, Body, Patch, Param, Delete, HttpStatus, Put } from '@nestjs/common';
 import { BooklibraryService } from './booklibrary.service';
 import { CreateBooklibraryDto } from './dto/booklibrary.dto';
 import { ApiTags } from '@nestjs/swagger';
@@ -29,7 +29,7 @@ export class BooklibraryController {
     return await this.booklibraryService.findOne(id);
   }
 
-  @Patch(':id')
+  @Put(':id')
   async updateBook(
     @Param('id') id: string, 
     @Body() createBooklibraryDto: CreateBooklibraryDto
