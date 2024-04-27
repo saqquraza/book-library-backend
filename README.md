@@ -32,6 +32,39 @@
 $ npm install
 ```
 
+## Config settings .env for connect postgres
+
+Once the database has been configured, start the Nest App via ```npm run start:dev``` it automatically synchronizes the entities so ready to use. :heart_eyes_cat:
+
+```
+  DB_NAME=booklibrary
+  DB_USER=postgres
+  DB_PASSWORD=local
+  DB_HOST=localhost
+  DB_PORT=5432
+```
+
+## Install TypeScript Node
+
+```bash
+   $ npm install -g ts-node
+```
+
+## Generate migrations with typeorm
+1. First run build before generate the migrations
+
+```bash
+   $ npm run build
+   $ npm run migration:generate
+```
+
+2. Rename "new" to something meaningful. Don't change the timestamp.
+
+## Running migrations with typeorm
+```bash
+   $ npm run build
+   $ npm run migration:run
+
 ## Running the app
 
 ```bash
